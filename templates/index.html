@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Chat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      display: flex; align-items: center; justify-content: center;
+      height: 100vh; background-attachment: fixed;
+      overflow: hidden;
+    }
+    form {
+      background: white; padding: 30px; border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      display: block; margin: 10px 0; width: 100%; padding: 10px; border-radius: 5px;
+    }
+
+    .join-Btn {
+      background-color: #4c6fff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-weight: 500;
+      margin-top: 5px;
+    }
+
+    .join-Btn:hover {
+      background-color: #3451b2;
+    }
+
+  </style>
+</head>
+<body>
+  <form method="POST">
+  <h2>Join a Chat Room</h2>
+  <div style="display: flex;flex-direction: column; align-items: center; justify-content: center;">
+  <input type="text" name="username" placeholder="Enter your name" required>
+  <input type="text" name="room_id" placeholder="Enter Room ID" required>
+  <button type="submit" class="join-Btn">Join Room</button></div>
+</form>
+
+</body>
+</html>

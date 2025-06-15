@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SimpleChat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" crossorigin="anonymous">
+</head>
+<body>
+  <section class="msger">
+    <header class="msger-header">
+      <div class="msger-header-title">
+        <i class="fas fa-comment-alt"></i> SimpleChat
+      </div>
+      <div class="msger-header-options">
+        <span><i class="fas fa-cog"></i></span>
+      </div>
+    </header>
+
+    <!-- ✅ Main chat box with username and room info -->
+    <main class="msger-chat" id="chat-box" data-username="{{ username }}" data-room="{{ room_id }}">
+      <!-- Messages will be added here dynamically -->
+    </main>
+
+    <form class="msger-inputarea" id="chat-form">
+      <input type="text" class="msger-input" id="message-input" placeholder="Enter your message..." autocomplete="off" required />
+      <button type="submit" class="msger-send-btn">Send</button>
+    </form>
+  </section>
+
+  <script src="https://cdn.socket.io/4.3.2/socket.io.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
